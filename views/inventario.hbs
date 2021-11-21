@@ -1,0 +1,161 @@
+<div class='container mt-3'>
+	<a href='/LogoutA' class='btn btn-outline-danger'>
+		Cerrar Sesion</a>
+</div>
+<!--Registro productos-->
+<div class='container mt-3'>
+	<nav class='navbar navbar-dark bg-dark px-3 py-3'>
+		<a class='navbar-brand'>
+			<h5>Registro de productos</h5>
+		</a>
+		<!--Primera fila-->
+		<form action='/Crear' method='POST'>
+			<div class='row w-100'>
+				<div class='col-sm-3'>
+					<label for='Nombre' style='color:white'>Nombre: </label>
+					<input
+						type='text'
+						name='Nombre'
+						placeholder='Nombre'
+						class='form-control my-2'
+						required='required'
+					/>
+				</div>
+				<div class='col-sm-3'>
+					<label for='Nombre' style='color:white'>Marca: </label>
+					<input
+						type='text'
+						name='Marca'
+						placeholder='Marca'
+						class='form-control my-2'
+						required='required'
+					/>
+				</div>
+				<div class='col-sm-3'>
+					<label for='Nombre' style='color:white'>Descripcion: </label>
+					<input
+						type='text'
+						name='Descripcion'
+						placeholder='Descripcion'
+						class='form-control my-2'
+						required='required'
+					/>
+				</div>
+			</div>
+			<!--Segunda Fila-->
+			<div class='row w-100'>
+				<div class='col-sm-3'>
+					<label for='Nombre' style='color:white'>Existencia: </label>
+					<input
+						type='number'
+						name='Existencia'
+						placeholder='Existencia'
+						class='form-control my-2'
+						required='required'
+					/>
+				</div>
+				<div class='col-sm-3'>
+					<label for='Nombre' style='color:white'>Precio: </label>
+					<input
+						type='number'
+						name='Precio'
+						placeholder='Precio'
+						class='form-control my-2'
+						required='required'
+					/>
+				</div>
+				<div class='col-sm-3'>
+					<label for='Nombre' style='color:white'>Tipo: </label>
+					<input
+						type='text'
+						name='Tipo'
+						placeholder='Tipo'
+						class='form-control my-2'
+						required='required'
+					/>
+				</div>
+				<div class='col-sm-3'>
+					<br />
+					<button
+						class='btn btn-sm form-control my-2 p-2 btn btn-outline-success font-weight-bold'
+					> Registrar</button>
+				</div>
+			</div>
+		</form>
+
+	</nav>
+	<hr />
+</div>
+<div class='container mt-3'>
+	<p><em>Para listar todos los productos, escribe all en ambas entradas:
+		</em></p>
+</div>
+<!--Boton de busquedad-->
+<div class='container mt-3'>
+	<form action='/Buscar' method='POST'>
+		<div class='row w-100'>
+			<div class='col-sm-4'>
+				<input
+					type='text'
+					name='atributo'
+					placeholder='Propiedad a buscar {nombre,tipo,marca...}'
+					class='form-control mt-2'
+					required='required'
+				/>
+				<input
+					type='text'
+					name='dato'
+					placeholder='Buscar'
+					class='form-control mt-2'
+					required='required'
+				/>
+			</div>
+
+			<div class='col-sm-4'>
+				<button
+					class='btn btn-md mt-2 btn btn-outline-Dark font-weight-bold'
+				>Buscar</button>
+			</div>
+		</div>
+	</form>
+	<hr />
+</div>
+<!--Tabla de productos-->
+<div class='container mt-3'>
+
+	<table class='table mt-3'>
+		<thead class='thead-dark'>
+			<tr>
+				<th scope='col'>Producto</th>
+				<th scope='col'>Marca</th>
+				<th scope='col'>Descripcion</th>
+				<th scope='col'>Existencia</th>
+				<th scope='col'>Tipo</th>
+				<th scope='col'>Precio</th>
+				<th scope='col'>Editar</th>
+				<th scope='col'>Eliminar</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each Producto}}
+				<tr>
+					<td>{{nombre}}</td>
+					<td>{{marca}}</td>
+					<td>{{descripcion}}</td>
+					<td>{{existencia}}</td>
+					<td>{{tipo}}</td>
+					<td>{{precio}}</td>
+					<th scope='col'><a
+							href='/Actualizar/{{_id}}'
+							class='btn btn-outline-warning'
+						>
+							Editar</a></th>
+
+					<th scope='col'><a href='/Eliminar/{{_id}}' class='btn btn-outline-danger'>
+							Eliminar</a></th>
+				</tr>
+			{{/each}}
+
+		</tbody>
+	</table>
+</div>

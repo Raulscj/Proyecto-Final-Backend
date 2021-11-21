@@ -1,0 +1,88 @@
+<div class='container mt-3'>
+	<nav class='navbar navbar-dark bg-dark px-3 py-3'>
+		<a class='navbar-brand'>
+			<h5>Edicion de productos</h5>
+		</a>
+		<!--Primera fila-->
+		<form action='/Actualizar/{{Producto._id}}' method='POST'>
+			<div class='row w-100'>
+				<div class='col-sm-3'>
+					<label for='Nombre' style='color:white'>Nombre: </label>
+					<input
+						type='text'
+						name='Nombre'
+						placeholder='Nombre'
+						class='form-control my-2'
+						required='required'
+						value='{{Producto.nombre}}'
+					/>
+				</div>
+				<div class='col-sm-3'>
+					<label for='Nombre' style='color:white'>Marca: </label>
+					<input
+						type='text'
+						name='Marca'
+						placeholder='Marca'
+						class='form-control my-2'
+						required='required'
+						value='{{Producto.marca}}'
+					/>
+				</div>
+				<div class='col-sm-3'>
+					<label for='Nombre' style='color:white'>Descripcion: </label>
+					<input
+						type='text'
+						name='Descripcion'
+						placeholder='Descripcion'
+						class='form-control my-2'
+						required='required'
+						value='{{Producto.descripcion}}'
+					/>
+				</div>
+			</div>
+			<!--Segunda Fila-->
+			<div class='row w-100'>
+				<div class='col-sm-3'>
+					<label for='Nombre' style='color:white'>Existencia: </label>
+					<input
+						type='number'
+						name='Existencia'
+						placeholder='Existencia'
+						class='form-control my-2'
+						required='required'
+						value='{{Producto.existencia}}'
+					/>
+				</div>
+				<div class='col-sm-3'>
+					<label for='Nombre' style='color:white'>Precio: </label>
+					<input
+						type='number'
+						name='Precio'
+						placeholder='Precio'
+						class='form-control my-2'
+						required='required'
+						value='{{Producto.precio}}'
+					/>
+				</div>
+				<div class='col-sm-3'>
+					<label for='Nombre' style='color:white'>Tipo: </label>
+					<input
+						type='text'
+						name='Tipo'
+						placeholder='Tipo'
+						class='form-control my-2'
+						required='required'
+						value='{{Producto.tipo}}'
+					/>
+				</div>
+				<div class='col-sm-3'>
+					<br />
+					<button
+						class='btn btn-sm form-control my-2 p-2 btn btn-outline-success font-weight-bold'
+					> Editar</button>
+				</div>
+			</div>
+		</form>
+
+	</nav>
+</div>

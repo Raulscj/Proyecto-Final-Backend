@@ -1,0 +1,104 @@
+<div class="container">
+        <!-- Primera fila -->
+        <div class="row heading text-center pt-5 w-100"> 
+            <!-- Heading /Titulo-->
+            <h2><em>Bienvenido a KevoShop</em></h2>
+        </div>
+        <!-- Segunda fila -->
+        <div class="row pt-5 w-100">
+            <!-- Primera columna -->
+            <div class="col-sm-6">
+                <div class="card w-90 card-border align-items-center mb-5">
+                    <h5 class="card-header text-center"><b><u>Administrador</u></b></h5>
+                    <div class="card-body align-items-center">
+                    <p class="card-text">
+                        <form action="/Inventarios" method="POST">
+                        <input type="text" name="email" placeholder="Correo" class="form-control my-3" required="required">
+                        <input type="password" name="password" placeholder="Clave" class="form-control my-3" required="required">
+                        <center>
+                        <button class="btn btn-sm rounded-pill btn btn-outline-success  p-3 shadow-sm font-weight-bold" >Iniciar</button> 
+                    </form>
+                    <!-- Boton integrado al modal -->
+                    <button type="button" class="btn btn-sm rounded-pill btn btn-outline-Danger  p-3 shadow-sm font-weight-bold" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                            Registrar
+                        </button> </center>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Registro de administradores</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="Inventario" method="POST">
+                                            <input type="text" name="username" placeholder="Usuario" class="form-control my-3" required="required">
+                                            <input type="text" name="email" placeholder="Email" class="form-control my-3" required="required">
+                                            <input type="password" name="password" placeholder="Clave" class="form-control my-3" required="required">
+                                            <input type="password" name="Codigo" placeholder="Codigo" class="form-control my-3" required="required">
+                                            <button class="btn btn-primary" >Guardar</button>
+                                        </form>
+
+                                    </div>
+                                    
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <!-- Segunda columna -->
+            <div class="col-sm-6">
+                <div class="card w-90 card-border align-items-center mb-5">
+                    <h5 class="card-header text-center"><b><u>Cliente</u></b></h5>
+                    <div class="card-body align-items-center">
+                        <p class="card-text">
+                            <form action="/Tiendas" method="POST">
+                            <input type="text" name="email" placeholder="Correo" class="form-control my-3" required="required">
+                            <input type="password" name="password" placeholder="Clave" class="form-control my-3" required="required">
+                            <center> 
+                            <button class="btn btn-sm rounded-pill btn btn-outline-success  p-3 shadow-sm font-weight-bold" >Iniciar</button>
+                            </form>
+                        <!-- Boton integrado al modal -->
+                        
+                        <button type="button" class="btn btn-sm rounded-pill btn btn-outline-Danger  p-3 shadow-sm font-weight-bold" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Registrar
+                        </button> </center>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Registro de clientes</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="/Tienda" method="POST">
+                                            <input type="text" name="username" placeholder="Usuario" class="form-control my-3" required="required">
+                                            <input type="text" name="email" placeholder="Email" class="form-control my-3" required="required">
+                                            <input type="password" name="password" placeholder="Clave" class="form-control my-3" required="required">
+                                            <button class="btn btn-primary" >Guardar</button>
+                                        </form>
+
+                                    </div>
+                                    
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+        <hr/>
+    </div>
