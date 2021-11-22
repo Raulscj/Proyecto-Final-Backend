@@ -76,9 +76,7 @@ async function Busqueda(req, res) {
 				.catch((err) => res.render('Err'));
 			break;
 		default:
-			res.send(
-				'La categoria selecionada, no se encuentra en el sistema, por favor intente con alguna de estas [tipo,marca,modelo,descripcion,precio,id]'
-			);
+			res.render('Err');
 	}
 }
 
