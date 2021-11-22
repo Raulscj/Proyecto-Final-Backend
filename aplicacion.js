@@ -41,7 +41,6 @@ servidor.engine(
 	engine({
 		defaultLayout: 'main',
 		layoutsDir: path.join(servidor.get('views'), 'layouts'),
-		partialsDir: path.join(servidor.get('views'), 'partials'),
 		extname: '.hbs',
 	})
 );
