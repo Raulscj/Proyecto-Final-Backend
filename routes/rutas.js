@@ -129,7 +129,7 @@ rutas.get('/Agregado/:id', async (req, res) => {
 				res.render('Tienda', { Registro, Producto, total_a_pagar });
 			} else {
 				objeto(req, res).then(async (resp) => {
-					await Nuevo_registro(
+					Nuevo_registro(
 						resp.nombre,
 						resp.tipo,
 						resp.marca,
